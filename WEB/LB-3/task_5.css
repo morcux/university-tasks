@@ -1,0 +1,89 @@
+ /* Світла тема (за замовчуванням) */
+ /* #f8f9fa
+ #212529
+ #0d6efd
+ #dee2e6
+ rgba(0, 0, 0, 0.075) */
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --primary-color: #0d6efd;
+    --border-color: #dee2e6;
+    --hover-color: rgba(0, 0, 0, 0.075);
+}
+
+
+/* Темна тема */
+ /* #212529
+ #f8f9fa
+ #85d3ff
+ #495057
+ rgba(255, 255, 255, 0.075) */
+:root:has(#theme-switcher:checked) {
+    --bg-color: #212529;
+    --text-color: #f8f9fa;
+    --primary-color: #85d3ff;
+    --border-color: #495057;
+    --hover-color: rgba(255, 255, 255, 0.075);
+}
+
+ 
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.page-wrapper {
+    font-family: Arial, sans-serif;
+    transition: 0.3s; /*Забезпечує плавніть зміни теми*/
+    height: 100vh; /* Забезпечуємо повну висоту екрана */
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.theme-label {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+h1 {
+    color: var(--primary-color);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid var(--border-color);
+}
+
+th {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+tr:hover {
+    background-color: var(--hover-color);
+}
+
+ul:last-of-type {
+    list-style-type: "✓ ";
+}
