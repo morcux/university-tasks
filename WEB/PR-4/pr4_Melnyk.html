@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Розклад тренувань</title>
+    <link rel="stylesheet" href="pr4_Melnyk.css">
+</head>
+<body>
+    <h1>Розклад тренувань спортзалу «Старт»</h1>
+
+    <p>
+        Дні:
+        <input type="checkbox" id="weekdays" checked>
+        <label for="weekdays">Будні</label>
+        <input type="checkbox" id="weekend" checked>
+        <label for="weekend">Вихідні</label>
+    </p>
+    <p>
+        Час:
+        <input type="checkbox" id="morning" checked>
+        <label for="morning">Перша половина дня</label>
+        <input type="checkbox" id="evening" checked>
+        <label for="evening">Друга половина дня</label>
+    </p>
+    <p>
+        Ліга:
+        <input type="checkbox" id="amateur" checked>
+        <label for="amateur">Аматорська</label>
+        <input type="checkbox" id="first" checked>
+        <label for="first">Перша</label>
+        <input type="checkbox" id="top" checked>
+        <label for="top">Вища</label>
+    </p>
+    <p>
+        <input type="checkbox" id="dark">
+        <label for="dark">Темна тема</label>
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Вид спорту</th>
+                <th>Команда</th>
+                <th>Ліга</th>
+                <th>Години тренувань</th>
+                <th>Кількість гравців</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="weekdays morning top">
+                <td>Волейбол</td>
+                <td>Буревій</td>
+                <td>Вища</td>
+                <td>Пн, Ср 08:00–10:00</td>
+                <td>12</td>
+            </tr>
+            <tr class="weekdays evening first">
+                <td>Баскетбол</td>
+                <td>Сокіл</td>
+                <td>Перша</td>
+                <td>Вт, Чт 18:00–20:00</td>
+                <td>10</td>
+            </tr>
+            <tr class="weekend morning amateur">
+                <td>Футзал</td>
+                <td>Кияни</td>
+                <td>Аматорська</td>
+                <td>Сб 10:00–12:00</td>
+                <td>14</td>
+            </tr>
+            <tr class="weekend evening first">
+                <td>Гандбол</td>
+                <td>Поділ</td>
+                <td>Перша</td>
+                <td>Нд 16:00–18:00</td>
+                <td>16</td>
+            </tr>
+            <tr class="weekdays evening amateur">
+                <td>Волейбол</td>
+                <td>Чайка</td>
+                <td>Аматорська</td>
+                <td>Вт, Пт 19:00–21:00</td>
+                <td>11</td>
+            </tr>
+            <tr class="weekdays morning top">
+                <td>Футзал</td>
+                <td>Арсенал-Т</td>
+                <td>Вища</td>
+                <td>Пн, Чт 07:30–09:30</td>
+                <td>14</td>
+            </tr>
+            <tr class="weekend morning amateur">
+                <td>Баскетбол</td>
+                <td>Дніпрові вовки</td>
+                <td>Аматорська</td>
+                <td>Сб, Нд 09:00–11:00</td>
+                <td>9</td>
+            </tr>
+            <tr class="weekdays morning first">
+                <td>Настільний теніс</td>
+                <td>Ракетка</td>
+                <td>Перша</td>
+                <td>Ср 10:00–12:00</td>
+                <td>6</td>
+            </tr>
+            <tr class="weekend evening top">
+                <td>Гандбол</td>
+                <td>Оболонь</td>
+                <td>Вища</td>
+                <td>Сб 15:00–17:00</td>
+                <td>15</td>
+            </tr>
+            <tr class="weekend evening amateur">
+                <td>Флорбол</td>
+                <td>Лісові їжаки</td>
+                <td>Аматорська</td>
+                <td>Нд 18:00–20:00</td>
+                <td>12</td>
+            </tr>
+            <tr class="weekend morning first">
+                <td>Волейбол</td>
+                <td>Звягель</td>
+                <td>Перша</td>
+                <td>Сб 08:30–10:30</td>
+                <td>12</td>
+            </tr>
+            <tr class="weekdays evening first">
+                <td>Футзал</td>
+                <td>Нивки</td>
+                <td>Перша</td>
+                <td>Ср, Пт 20:00–22:00</td>
+                <td>13</td>
+            </tr>
+            <tr class="weekend morning top">
+                <td>Баскетбол</td>
+                <td>Метеор</td>
+                <td>Вища</td>
+                <td>Нд 09:30–11:30</td>
+                <td>10</td>
+            </tr>
+            <tr class="weekdays evening first">
+                <td>Флорбол</td>
+                <td>Борщагівка</td>
+                <td>Перша</td>
+                <td>Пн, Ср 16:00–18:00</td>
+                <td>12</td>
+            </tr>
+            <tr class="weekdays morning amateur">
+                <td>Настільний теніс</td>
+                <td>Топспін</td>
+                <td>Аматорська</td>
+                <td>Вт, Чт 09:00–11:00</td>
+                <td>5</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form>
+        <p>
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+380XXXXXXXXX" pattern="\+380[0-9]{9}" required>
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </p>
+        <button type="submit">Надіслати дані на телефон</button>
+    </form>
+</body>
+</html>

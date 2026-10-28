@@ -1,0 +1,55 @@
+body {
+    --bg: #ffffff;
+    --text: #000000;
+    --odd: #dddddd;
+    --even: #ffffff;
+    --hover: #ffcc00;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+body:has(#dark:checked) {
+    --bg: #222222;
+    --text: #eeeeee;
+    --odd: #333333;
+    --even: #444444;
+    --hover: #ff9800;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #888888;
+    padding: 5px 10px;
+}
+
+tbody tr:nth-child(odd) {
+    background: var(--odd);
+}
+
+tbody tr:nth-child(even) {
+    background: var(--even);
+}
+
+tbody tr:hover {
+    background: var(--hover);
+    color: #000000;
+}
+
+body:has(#weekdays:not(:checked)) .weekdays,
+body:has(#weekend:not(:checked)) .weekend,
+body:has(#morning:not(:checked)) .morning,
+body:has(#evening:not(:checked)) .evening,
+body:has(#amateur:not(:checked)) .amateur,
+body:has(#first:not(:checked)) .first,
+body:has(#top:not(:checked)) .top {
+    display: none;
+}
+
+form:has(input:invalid) button {
+    display: none;
+}
