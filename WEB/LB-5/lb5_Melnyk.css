@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    padding: 0 20px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+#view-tile,
+#view-list {
+    display: none;
+}
+
+.view-switch {
+    margin-bottom: 15px;
+}
+
+.view-switch label {
+    margin-right: 25px;
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+}
+
+#view-tile:checked ~ .view-switch .tile-btn,
+#view-list:checked ~ .view-switch .list-btn {
+    color: #1f2d3d;
+}
+
+.catalog {
+    font-size: 0;
+}
+
+.card {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 31.33%;
+    margin: 0 1% 20px;
+    padding: 15px 20px;
+    vertical-align: top;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ddd;
+    transition: box-shadow 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-photo {
+    height: 220px;
+    line-height: 220px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card-photo img {
+    max-width: 100%;
+    max-height: 200px;
+    vertical-align: middle;
+    transition: transform 0.3s;
+}
+
+.card-photo img:hover {
+    transform: scale(1.07);
+}
+
+.card-title {
+    display: block;
+    margin-top: 10px;
+    overflow: hidden;
+    font-size: 18px;
+    color: #3d6fa5;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card-title:hover {
+    color: #d9363e;
+}
+
+.card-category {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #777;
+    text-decoration: none;
+}
+
+.card-category:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.card-price {
+    margin: 5px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #d9363e;
+}
+
+.card-desc {
+    height: 4.2em;
+    margin: 12px 0 0;
+    overflow: hidden;
+    line-height: 1.4;
+    color: #555;
+}
+
+.rating {
+    display: inline-block;
+    direction: rtl;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.rating input:checked ~ label {
+    color: #f5a623;
+}
+
+.rating:hover input:checked ~ label {
+    color: #ccc;
+}
+
+.rating:hover label:hover,
+.rating:hover label:hover ~ label {
+    color: #f5a623;
+}
+
+#view-list:checked ~ .catalog .card {
+    width: 98%;
+    padding: 20px;
+}
+
+#view-list:checked ~ .catalog .card-photo,
+#view-list:checked ~ .catalog .card-info,
+#view-list:checked ~ .catalog .card-desc {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+#view-list:checked ~ .catalog .card-photo {
+    width: 25%;
+}
+
+#view-list:checked ~ .catalog .card-info {
+    width: 40%;
+    padding: 0 20px;
+}
+
+#view-list:checked ~ .catalog .card-desc {
+    width: 33%;
+    height: auto;
+    margin: 0;
+}
+
+@media (min-width: 1300px) {
+    .card {
+        width: 23%;
+    }
+}
+
+@media (max-width: 900px) {
+    .card {
+        width: 48%;
+    }
+}
+
+@media (max-width: 560px) {
+    .card,
+    #view-list:checked ~ .catalog .card {
+        width: 98%;
+    }
+
+    #view-list:checked ~ .catalog .card-photo,
+    #view-list:checked ~ .catalog .card-info,
+    #view-list:checked ~ .catalog .card-desc {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.credits {
+    font-size: 11px;
+    color: #999;
+}
