@@ -1,0 +1,224 @@
+body {
+  margin: 0;
+  padding: 20px 70px 40px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 5px;
+  font-size: 28px;
+}
+
+#slide-1,
+#slide-2,
+#slide-3 {
+  display: none;
+}
+
+.gallery {
+  position: relative;
+}
+
+.viewport {
+  clip-path: inset(-1000px 0 -1000px 0);
+}
+
+.track {
+  position: relative;
+  left: 0;
+  width: 300%;
+  font-size: 0;
+  white-space: nowrap;
+  transition: left 0.6s ease;
+}
+
+.slide {
+  display: inline-block;
+  width: 33.3333%;
+  white-space: normal;
+  vertical-align: top;
+}
+
+#slide-2:checked ~ .gallery .track {
+  left: -100%;
+}
+
+#slide-3:checked ~ .gallery .track {
+  left: -200%;
+}
+
+.dish {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 25%;
+  height: 230px;
+  padding: 0 8px;
+  font-size: 14px;
+  vertical-align: top;
+  color: #333;
+  text-decoration: none;
+}
+
+.dish img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.recipe {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  padding: 12px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.dish:hover .recipe {
+  display: block;
+}
+
+.recipe img {
+  height: 200px;
+}
+
+.recipe-title {
+  display: block;
+  margin: 12px 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #3b6ea5;
+  text-decoration: underline;
+}
+
+.recipe-ingredients {
+  display: block;
+  margin-bottom: 12px;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.recipe-ingredients span {
+  display: block;
+}
+
+.recipe-steps {
+  display: block;
+  line-height: 1.4;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  display: none;
+  width: 0;
+  height: 0;
+  margin-top: -35px;
+  border-top: 35px solid transparent;
+  border-bottom: 35px solid transparent;
+  cursor: pointer;
+}
+
+.arrow-next {
+  right: -50px;
+  border-left: 28px solid #a3afbc;
+}
+
+.arrow-prev {
+  left: -50px;
+  border-right: 28px solid #a3afbc;
+}
+
+.arrow-next:hover {
+  border-left-color: #6d7d8e;
+}
+
+.arrow-prev:hover {
+  border-right-color: #6d7d8e;
+}
+
+#slide-1:checked ~ .gallery .next-1,
+#slide-2:checked ~ .gallery .prev-2,
+#slide-2:checked ~ .gallery .next-2,
+#slide-3:checked ~ .gallery .prev-3 {
+  display: block;
+}
+
+.dots {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.dots label {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 7px;
+  background-color: #eee;
+  border: 1px solid #999;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#slide-1:checked ~ .dots label[for="slide-1"],
+#slide-2:checked ~ .dots label[for="slide-2"],
+#slide-3:checked ~ .dots label[for="slide-3"] {
+  background-color: #666;
+  box-shadow: inset 0 0 0 3px #eee;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+  background-color: rgba(90, 110, 135, 0.8);
+}
+
+.modal:target {
+  display: block;
+}
+
+.modal img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 70%;
+  max-height: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  font-size: 0;
+}
+
+.modal-close::before,
+.modal-close::after {
+  position: absolute;
+  top: 24px;
+  left: -10px;
+  width: 70px;
+  height: 3px;
+  content: "";
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
