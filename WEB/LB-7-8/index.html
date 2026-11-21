@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пироги &amp; Тістечка</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="radio" name="kind" id="f-all" class="filter-input" checked>
+  <input type="radio" name="kind" id="f-tort" class="filter-input">
+  <input type="radio" name="kind" id="f-pyrih" class="filter-input">
+  <input type="radio" name="kind" id="f-tistechko" class="filter-input">
+  <input type="radio" name="kind" id="f-rulet" class="filter-input">
+  <input type="radio" name="kind" id="f-syrnyky" class="filter-input">
+  <input type="radio" name="kind" id="f-varenyky" class="filter-input">
+
+  <header class="header">
+    <h1>Пироги <span class="amp">&amp;</span> Тістечка</h1>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="kcal-filter">
+        <p class="kcal-title">Калорії у порції</p>
+        <div class="kcal-range">
+          <span class="kcal-knob"></span>
+          <span class="kcal-knob kcal-knob-right"></span>
+        </div>
+        <p class="kcal-text">Від 0 до 400 кКал</p>
+      </div>
+      <div class="filters">
+        <label for="f-tort">Торт</label>
+        <label for="f-pyrih">Пиріг</label>
+        <label for="f-tistechko">Тістечко</label>
+        <label for="f-rulet">Рулет</label>
+        <label for="f-syrnyky">Сирники</label>
+        <label for="f-varenyky">Вареники</label>
+        <label for="f-all">Скинути фільтр</label>
+      </div>
+    </aside>
+
+    <main class="cards">
+      <article class="card tort">
+        <img src="img/kyiv.jpg" alt="Торт «Київський»">
+        <h2 class="card-name"><span class="card-kind">Торт:</span> Київський</h2>
+        <p class="card-kcal">Калорії у порції 520 кКал</p>
+      </article>
+      <article class="card pyrih">
+        <img src="img/carrot.jpg" alt="Пиріг «Морквяний»">
+        <h2 class="card-name"><span class="card-kind">Пиріг:</span> Морквяний</h2>
+        <p class="card-kcal">Калорії у порції 410 кКал</p>
+      </article>
+      <article class="card tistechko">
+        <img src="img/brownie.jpg" alt="Тістечко «Брауні»">
+        <h2 class="card-name"><span class="card-kind">Тістечко:</span> Брауні</h2>
+        <p class="card-kcal">Калорії у порції 450 кКал</p>
+      </article>
+      <article class="card tort">
+        <img src="img/medovyk.jpg" alt="Торт «Медовик»">
+        <h2 class="card-name"><span class="card-kind">Торт:</span> Медовик</h2>
+        <p class="card-kcal">Калорії у порції 470 кКал</p>
+      </article>
+      <article class="card rulet">
+        <img src="img/makivnyk.jpg" alt="Рулет «Маковий»">
+        <h2 class="card-name"><span class="card-kind">Рулет:</span> Маковий</h2>
+        <p class="card-kcal">Калорії у порції 360 кКал</p>
+      </article>
+      <article class="card syrnyky">
+        <img src="img/syrnyky.jpg" alt="Сирники «З ягодами»">
+        <h2 class="card-name"><span class="card-kind">Сирники:</span> З ягодами</h2>
+        <p class="card-kcal">Калорії у порції 320 кКал</p>
+      </article>
+      <article class="card tort">
+        <img src="img/napoleon.jpg" alt="Торт «Наполеон»">
+        <h2 class="card-name"><span class="card-kind">Торт:</span> Наполеон</h2>
+        <p class="card-kcal">Калорії у порції 540 кКал</p>
+      </article>
+      <article class="card tistechko">
+        <img src="img/eclair.jpg" alt="Тістечко «Еклер»">
+        <h2 class="card-name"><span class="card-kind">Тістечко:</span> Еклер</h2>
+        <p class="card-kcal">Калорії у порції 280 кКал</p>
+      </article>
+      <article class="card pyrih">
+        <img src="img/galette.jpg" alt="Пиріг «Яблучний відкритий»">
+        <h2 class="card-name"><span class="card-kind">Пиріг:</span> Яблучний відкритий</h2>
+        <p class="card-kcal">Калорії у порції 290 кКал</p>
+      </article>
+      <article class="card tort">
+        <img src="img/cheesecake.jpg" alt="Торт «Чізкейк»">
+        <h2 class="card-name"><span class="card-kind">Торт:</span> Чізкейк</h2>
+        <p class="card-kcal">Калорії у порції 390 кКал</p>
+      </article>
+      <article class="card varenyky">
+        <img src="img/varenyky.jpg" alt="Вареники «З вишнями»">
+        <h2 class="card-name"><span class="card-kind">Вареники:</span> З вишнями</h2>
+        <p class="card-kcal">Калорії у порції 250 кКал</p>
+      </article>
+      <article class="card tistechko">
+        <img src="img/tiramisu.jpg" alt="Тістечко «Тірамісу»">
+        <h2 class="card-name"><span class="card-kind">Тістечко:</span> Тірамісу</h2>
+        <p class="card-kcal">Калорії у порції 430 кКал</p>
+      </article>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p class="footer-contacts">
+      <span class="footer-label">Контакти:</span>
+      <a href="https://github.com/morcux">&#9993; github.com/morcux</a>
+    </p>
+    <p class="footer-copy">&copy; 2026 Дмитро Мельник</p>
+  </footer>
+</body>
+</html>
