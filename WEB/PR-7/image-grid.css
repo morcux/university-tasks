@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  padding: 10px;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-grid img {
+  flex: 1 1 250px;
+  height: 200px;
+  margin: 5px;
+  object-fit: cover;
+}
