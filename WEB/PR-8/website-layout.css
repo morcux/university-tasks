@@ -1,0 +1,46 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px auto 40px;
+  grid-template-areas:
+    "h h h h h h h h h h h h"
+    "m m c c c c c c c c c c"
+    "f f f f f f f f f f f f";
+}
+
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: #fff;
+}
+
+.header {
+  grid-area: h;
+  background-color: #3a6ea5;
+}
+
+.menu {
+  grid-area: m;
+  background-color: #5b8c5a;
+}
+
+.content {
+  grid-area: c;
+  background-color: #c0703d;
+}
+
+.footer {
+  grid-area: f;
+  background-color: #444;
+}
